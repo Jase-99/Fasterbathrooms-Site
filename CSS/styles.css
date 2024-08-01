@@ -1,0 +1,108 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	background-color: #f7f9ff;
+}
+
+.navBar {
+	background-color: #efefef;
+	display: flex; /*positions items on main axis (horizontal) */
+	justify-content: flex-end; /*align items on main axis*/
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 1; /* ensures the navbar stays on top of other elements */
+}
+.navLinkList {
+	display: flex;
+	list-style: none;
+	gap: 50px; /*sets the gap between each item in the navbar */
+	justify-content: center;
+	align-items: center;
+	padding-right: 50px;
+}
+.navItem {
+	display: flex;
+	align-items: center;
+}
+.navItem > .navLinkList > li > a.navLink {
+	display: flex;
+	align-items: center;
+	padding-right: 20px;
+	text-decoration: none;
+	color: #3880e3;
+}
+.logo {
+	align-items: flex-start;
+	flex-grow: 1;
+}
+
+a.CTA {
+	background-color: #3880e3;
+	color: #e6f4f1 !important;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.slider_container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: hidden;
+}
+.slider {
+	position: relative;
+	width: 400%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+}
+.slide {
+	position: relative;
+	min-width: 100%;
+	height: 100%;
+}
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes sliding {
+	0% {
+		transform: translateX(0%);
+	}
+	20% {
+		transform: translateX(0%);
+	}
+	25% {
+		transform: translateX(-100%);
+	}
+	45% {
+		transform: translateX(-100%);
+	}
+	50% {
+		transform: translateX(-200%);
+	}
+	70% {
+		transform: translateX(-200%);
+	}
+	75% {
+		transform: translateX(-300%);
+	}
+	95% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(-400%);
+	}
+}
